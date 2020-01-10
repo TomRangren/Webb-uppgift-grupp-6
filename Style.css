@@ -1,53 +1,60 @@
 body{
  margin:0;
  padding:0;
- font-family:"sans-serif";
  background: url("https://www.lego.com/r/www/r/catalogs/-/media/catalogs/videos/mindstorms/primary%20image/8%20wack3m%203%20hq%202-min.jpg?l.r=137661112");
 }
 .container{
- width:800px;
- margin:50px auto 0;
+ width:59%;
+ margin:10% auto 0;
  display:table;
  box-sizing:border-box;
 }
 .row{
- margin:20px 0;
+ margin:0.000001% 0;
 }
 .cow{
- margin:20px 0;
+ margin:5% 0;
 }
 h1{
 	text-align: center;
-	margin: 5px;
-	padding: 5px;
+	margin: 0.5%;
+	padding: 0.5%;
+	color:white;
+	font-family:"helvetica";
 }
 p{
-	margin: 5px;
-	padding: 10px;
+	margin: 0.5%;
+	padding: 1%;
+	font-weight: bold;
+	font-family:"helvetica";
 }
-
+.column3{
+	width: 50px;
+	height: 150px;
+}
 .column2{
- background: black;
+ background: #349EE3;
  display:table-cell;
- padding: 1px;
+ padding: 0.1%;
  width:33.333%;
  text-align:center;
- color:white;
+ color:DEE0E7;
  vertical-align:top;
  font-family: Trebuchet MS;
- border-radius: 10px;
+ border-radius: 1%;
  border-left:5px solid black;
-    border-right:5px solid gray;
-	border-bottom: 5px solid white;
-	border-top: 5px solid white;
-	margin: 2px;
+    border-right:5px solid black;
+	border-bottom: 5px solid black;
+	border-top: 5px solid black;
+	margin: 0.2%;
 }
+
 .column, .column3{
  background: white;
  display:table-cell;
- padding: 1px;
- width:33.333%;
- text-align:left;
+ padding: 0.1%;
+ width:33.33333333%;
+ text-align:center;
  color:black;
  vertical-align:top;
  border-left:5px solid black;
@@ -55,10 +62,194 @@ p{
  border-bottom: 5px solid black;
  border-top: 5px solid black;
 }
+.text1{
+	background-color: green;
+}
 
 .row:nth-child(1) .column:nth-child(1)
 {
  background-color:black;
 }
+/*...............topnav css...............*/
+.w{
+display:grid;
+    grid-template-areas: 1fr 1fr 1fr;
+    grid-template-rows: 85px 300px;
+}
 
-@media { (max-width: 900px)}
+.page1 .w{
+grid-template-areas:
+"header header "
+". . "
+"main main "
+  "footer footer ";
+}
+
+.page11{
+background-color: #349EE3;
+grid-area:header;
+    display:grid;
+    grid-template-areas:
+    "picsize1 g";
+
+}
+.picsize1{
+grid-area:picsize1;}
+
+.g{
+grid-area:g;
+ list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+        display: flex;
+  float: none;
+
+
+}
+ li a {
+margin:20px;
+  color: black;
+  text-decoration: none;
+    font-size:20px;
+    font-family: Share Tech Mono,monospace;
+margin:50px;
+line-height:3;
+
+}
+main{
+display:grid;
+grid-area:
+
+}
+
+.active{
+position:relative;}
+.active::after {
+    bottom: 1px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 15%;
+    background-color: yellow;
+position:absolute;
+
+
+
+}
+
+ a:hover {
+  color: white;
+}
+
+.picsize1{
+width: 5vw;
+}
+
+
+
+/*...............Grid media css...............*/
+
+.wrapper{
+font-family: Share Tech Mono,monospace;
+display: grid;
+grid-template-areas:
+'header'
+'main';
+
+    overflow; scroll;
+margin-top: 7%;
+margin-left: 30vw;
+margin-right: 30vw;
+min-width: 438px;
+}
+
+
+.info{
+grid-area: header;
+display: grid;
+    background-color: #349EE3;
+grid-template-rows: 10px 70px;
+grid-template-areas: 's1';
+border-top-left-radius: 0px;
+border-top-right-radius: 100px;
+}
+
+
+.cont{
+grid-area: main;
+display: grid;
+grid-template-rows: 100px 350px;
+grid-template-areas: 's1 s2'
+'s1 s2';
+}
+
+
+section{
+font-size: 15px;
+}
+
+
+section:first-child{
+grid-area: s1;
+background-color: lightgrey;
+}
+
+
+section:nth-child(2){
+grid-area: s2;
+justify-self: end;
+}
+
+
+
+/*...............iframe css...............*/  
+
+.info{
+text-align: center;
+font-family: Share Tech Mono,monospace;
+font-size: 16;
+}
+
+
+.iframe-container {
+min-width: 330px;
+}
+
+
+.iframe-container iframe {
+border: 0;
+height: 100%;
+width: 103%;
+position:relative;
+right:3%;
+}
+
+
+
+/*...............scroll css...............*/
+::-webkit-scrollbar {
+width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+box-shadow: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background: grey;
+outline: 1px solid slategrey;
+}
+
+
+/*...............footer css...............*/
+footer {
+background-image: url();
+    margin:0 auto;
+    width:100vw;
+    height:10vw;
+    overflow:hidden;
+    position: fixed;
+    bottom: 0px;
+left: 0px;
+}
